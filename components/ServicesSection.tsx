@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const servicesData = [
@@ -41,11 +42,20 @@ const CheckIcon: React.FC<{ className?: string }> = ({ className }) => (
   </svg>
 );
 
+const AccentShape: React.FC = () => (
+    <div className="absolute top-0 right-0 -translate-y-1/3 translate-x-1/3 w-2/3 max-w-2xl pointer-events-none" aria-hidden="true">
+        <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" className="text-[#D4A056] opacity-10">
+            <circle cx="250" cy="250" r="250" fill="currentColor" />
+            <circle cx="250" cy="250" r="180" fill="#fff" />
+        </svg>
+    </div>
+);
 
 const ServicesSection: React.FC = () => {
   return (
-    <section id="services" className="py-20 bg-white">
-      <div className="container mx-auto px-6">
+    <section id="services" className="py-20 bg-white relative overflow-hidden">
+      <AccentShape />
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center">
           <h2 className="text-3xl font-bold text-[#0F4C5C] mb-4">What We Do</h2>
           <p className="text-gray-600 max-w-2xl mx-auto mb-12">

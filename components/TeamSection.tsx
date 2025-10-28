@@ -2,10 +2,22 @@
 import React from 'react';
 import { TEAM_DATA } from '../constants';
 
+const LineAccent: React.FC = () => (
+    <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/3 w-1/2 max-w-md pointer-events-none" aria-hidden="true">
+        <svg width="404" height="404" fill="none" viewBox="0 0 404 404" className="text-[#D4A056] opacity-10">
+            <path d="M404 0L0 404" stroke="currentColor" strokeWidth="4" />
+            <path d="M404 100L100 404" stroke="currentColor" strokeWidth="4" />
+            <path d="M404 200L200 404" stroke="currentColor" strokeWidth="4" />
+            <path d="M404 300L300 404" stroke="currentColor" strokeWidth="4" />
+        </svg>
+    </div>
+);
+
 const TeamSection: React.FC = () => {
   return (
-    <section id="team" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-6 text-center">
+    <section id="team" className="py-20 bg-gray-50 relative overflow-hidden">
+      <LineAccent />
+      <div className="container mx-auto px-6 text-center relative z-10">
         <h2 className="text-3xl font-bold text-[#0F4C5C] mb-4">Meet Our Team</h2>
         <p className="text-gray-600 max-w-2xl mx-auto mb-12">
           Our dedicated experts are the driving force behind our mission, bringing a wealth of experience and passion to every project.

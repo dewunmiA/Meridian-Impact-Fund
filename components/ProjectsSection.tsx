@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { PROJECTS_DATA } from '../constants';
 import { Project } from '../types';
@@ -98,7 +99,8 @@ const ProjectsSection: React.FC = () => {
         <section id="projects" className="py-20 bg-white">
             <div className="container mx-auto px-6">
                 <div className="text-center">
-                    <h2 className="text-3xl font-bold text-[#0F4C5C] mb-4">Our Work</h2>
+                    <h2 className="text-3xl font-bold text-[#0F4C5C] mb-2">Our Work</h2>
+                    <div className="inline-block w-24 h-1 bg-[#D4A056] rounded-full mb-4"></div>
                     <p className="text-gray-600 max-w-2xl mx-auto mb-12">
                         We partner with organizations to design and implement strategies that drive measurable social impact. Here are some of our past projects.
                     </p>
