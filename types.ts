@@ -27,4 +27,5 @@ export interface Project {
   outcomes: string[];
   skills: string[];
   url?: string;
+  featured?: boolean;
 }

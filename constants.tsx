@@ -64,6 +64,7 @@ export const PROJECTS_DATA: Project[] = [
       'Set up a learning loop that ties reach and engagement to shifts in awareness, intent, and participation.',
     ],
     skills: ['Project Management', 'Policy Advocacy', 'Communications for Development', 'Community Management'],
+    featured: true,
   },
   {
     title: '#WEELiftNaija',
@@ -83,6 +84,7 @@ export const PROJECTS_DATA: Project[] = [
     ],
     skills: ['Project Management', 'Strategic Partnerships', 'Policy Advocacy', 'Collaboration', 'Communication for Development', 'Community Impact', 'Advocacy Campaigns'],
     url: 'https://trello.com/b/j095Ht2g',
+    featured: true,
   },
   {
     title: '#TransformingTogetherMNCH',

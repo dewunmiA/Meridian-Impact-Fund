@@ -21,21 +21,30 @@ interface AccordionItemProps {
 }
 
 const AccordionItem: React.FC<AccordionItemProps> = ({ project, isOpen, onToggle }) => {
+    const buttonBgClass = project.featured ? 'bg-[#D4A056]/10 hover:bg-[#D4A056]/20' : 'hover:bg-gray-50';
+
     return (
         <div className="border-b border-gray-200">
             <button
                 onClick={onToggle}
-                className="w-full flex justify-between items-center text-left py-6 px-4 hover:bg-gray-50 focus:outline-none transition-colors duration-300"
+                className={`w-full flex justify-between items-center text-left py-6 px-4 focus:outline-none transition-colors duration-300 ${buttonBgClass}`}
                 aria-expanded={isOpen}
             >
                 <div>
-                    <h3 className="text-xl font-bold text-[#0F4C5C]">{project.title}</h3>
-                    <p className="text-sm text-[#D4A056] font-semibold mt-1">{project.association}</p>
+                    <div className="flex items-center gap-3 flex-wrap">
+                        <h3 className="text-xl font-bold text-[#0F4C5C]">{project.title}</h3>
+                        {project.featured && (
+                            <span className="bg-[#D4A056] text-white text-xs font-bold px-2.5 py-1 rounded-full tracking-wider">
+                                FEATURED
+                            </span>
+                        )}
+                    </div>
+                    <p className="text-sm text-gray-500 font-semibold mt-1">{project.association}</p>
                 </div>
                 <ChevronDownIcon className={`w-6 h-6 text-gray-500 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
             </button>
             <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-[2000px]' : 'max-h-0'}`}>
-                <div className="p-6 bg-gray-50/50">
+                <div className={`p-6 ${project.featured ? 'bg-[#D4A056]/5' : 'bg-gray-50/50'}`}>
                     <p className="text-gray-600 mb-6 leading-relaxed">{project.description}</p>
                     
                     <div className="grid md:grid-cols-2 gap-6">
@@ -79,7 +88,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ project, isOpen, onToggle
 
 
 const ProjectsSection: React.FC = () => {
-    const [openIndex, setOpenIndex] = useState<number | null>(null);
+    const [openIndex, setOpenIndex] = useState<number | null>(0);
 
     const handleToggle = (index: number) => {
         setOpenIndex(openIndex === index ? null : index);
