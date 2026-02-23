@@ -8,6 +8,7 @@ export const NAV_LINKS: NavLink[] = [
   { href: '#projects', label: 'Our Work' },
   { href: '#impact', label: 'Impact' },
   { href: '#team', label: 'Team' },
+  { href: '#events', label: 'Events' },
   { href: '#contact', label: 'Contact' },
 ];
 
@@ -23,7 +24,7 @@ export const SERVICES_DATA: Service[] = [
   {
     title: 'Strategy & Programme Design',
     items: [
-      'Impact theses, theory of change, and portfolio design using the ANCHOR Framework for organizations and coalitions.',
+      'Impact theses, theory of change, and portfolio design using the ANCHOR Framework for organisations and coalitions.',
       'Connecting impact strategies to the bottom line for long-term sustainability.',
       'Design of flagship programmes, funds, and accelerators.',
     ],
@@ -47,7 +48,7 @@ export const SERVICES_DATA: Service[] = [
   {
     title: 'Storytelling, Advocacy & Reporting',
     items: [
-      'Narrative architecture and communications toolkits.',
+      'Narrative design and communications toolkits.',
       'Impact reporting and policy advocacy campaigns.',
       'Content and campaigns through vehicles like Creatives4Dev.',
     ],
@@ -58,7 +59,7 @@ export const PROJECTS_DATA: Project[] = [
   {
     title: '#Creatives4Dev',
     association: 'Associated with Eden Venture Group',
-    description: 'A creator-led initiative that upskills creatives, artists and content creators into development actors who can turn complex policy and programme goals into clear, high-impact content. It connects storytellers, designers, and strategists with NGOs, coalitions, and public agencies to drive behaviour change, mobilise communities, and support policy uptake.',
+    description: 'A creator-led initiative that upskills creatives, artists, and content creators into development actors who can turn complex policy and programme goals into clear, high-impact content. It connects storytellers, designers, and strategists with NGOs, coalitions, and public agencies to drive behaviour change, mobilise communities, and support policy uptake.',
     coreElements: [
       'Creator network: Recruits and trains creators in policy literacy, ethics, and impact storytelling across themes like WEE, MNCH, climate, youth, and the creative economy.',
       'Responsible AI studio: Workflow for content generation, translation, accessibility, and QA with bias, safety, and attribution guardrails.',
@@ -81,8 +82,8 @@ export const PROJECTS_DATA: Project[] = [
     coreElements: [
       'Policy Translation: Broke down the national WEE Policy into simple, actionable messages that highlighted how it affects women’s daily lives, from land rights to access to justice and economic protections.',
       'Public Engagement: Activated across social media platforms (Instagram, X, YouTube) to demystify policy language and make advocacy accessible through explainers, reels, and campaign graphics.',
-      'Days of Advocacy: Organized thematic activations in communities and online, spotlighting issues like access to land, justice, and finance for women.',
-      'Partnerships: Worked with NGOs, CSO, Govt agencies, faith groups, and community actors to localize and ground the campaign in real experiences.',
+      'Days of Advocacy: Organised thematic activations in communities and online, spotlighting issues like access to land, justice, and finance for women.',
+      'Partnerships: Worked with NGOs, CSOs, Govt agencies, faith groups, and community actors to localise and ground the campaign in real experiences.',
       'WEE Champions: Mobilised a volunteer network of “champions” who carried messages into their own communities and online spaces, creating peer-to-peer advocacy momentum.',
     ],
     outcomes: [
@@ -129,7 +130,7 @@ export const PROJECTS_DATA: Project[] = [
       'Established stewardship KPIs and reporting systems.',
       'Fostered internal alignment for implementation.',
     ],
-    skills: [],
+    skills: ['Strategic Planning', 'Resource Mobilisation', 'Governance', 'KPI Design'],
   },
 ];
 
@@ -137,7 +138,7 @@ export const TEAM_DATA: TeamMember[] = [
   {
     imageUrl: 'https://i.pinimg.com/1200x/91/37/2f/91372f3f7d59aa024cd88d69d0aeb641.jpg',
     name: 'Maliz Mahop',
-    title: 'Director of Partnerships',
+    title: 'Head of Partnerships',
     bio: 'An expert in forging cross-sectoral alliances, leveraging global networks to secure critical resources for local impact initiatives.'
   },
   {
@@ -149,19 +150,19 @@ export const TEAM_DATA: TeamMember[] = [
   {
     imageUrl: 'https://i.pinimg.com/736x/fc/b1/fb/fcb1fb0a9e8a987abf960f69e0743ea6.jpg',
     name: 'Adewale Aina',
-    title: 'Lead Field Coordinator',
+    title: 'Head of Projects',
     bio: 'Orchestrates on-the-ground operations, ensuring strategies are culturally responsive and directly address the evolving needs of communities.'
   },
   {
     imageUrl: 'https://i.pinimg.com/736x/bf/43/c9/bf43c98cb979898b12249f052adde17e.jpg',
     name: 'Omolola Oni',
     title: 'Head of Digital Content',
-    bio: 'Specializes in storytelling and communications that resonate with audiences and drive measurable results. Deeply committed to gender equality and good governance.'
+    bio: 'Specialises in storytelling and communications that resonate with audiences and drive measurable results. Deeply committed to gender equality and good governance.'
   },
   {
     imageUrl: 'https://media.licdn.com/dms/image/v2/D4D03AQGjJCvpSTG3JQ/profile-displayphoto-crop_800_800/B4DZeiBxysHAAI-/0/1750770066357?e=1770854400&v=beta&t=uQ86hC5tOzNxBSdc61BvrvLG_kGdkIZX9SeKXifyKzM',
     name: 'Funsho Sanni',
     title: 'Head of Tax & Regulatory Services',
-    bio: 'Ensures impact initiatives are financially sustainable and compliant, structuring funds and operations to maximize value for all stakeholders.'
+    bio: 'Ensures impact initiatives are financially sustainable and compliant, structuring funds and operations to maximise value for all stakeholders.'
   }
 ];

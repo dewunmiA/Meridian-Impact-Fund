@@ -1,0 +1,16 @@
+{
+    "name": "meridian/impact-fund",
+    "description": "Professional website for Meridian Impact Fund social impact consulting.",
+    "type": "project",
+    "license": "proprietary",
+    "require": {
+        "php": ">=7.4"
+    },
+    "authors": [
+        {
+            "name": "Meridian Impact Fund",
+            "email": "contact@meridianimpact.org"
+        }
+    ],
+    "minimum-stability": "stable"
+}

@@ -17,12 +17,19 @@ import MediaShowcase from './components/MediaShowcase';
 const App: React.FC = () => {
   const [isAnchorModalOpen, setIsAnchorModalOpen] = useState(false);
   const [currentView, setCurrentView] = useState<'home' | 'founder'>('home');
+  const [activeFounderTab, setActiveFounderTab] = useState<'founder' | 'team' | 'events'>('founder');
 
   const openAnchorModal = () => setIsAnchorModalOpen(true);
   const closeAnchorModal = () => setIsAnchorModalOpen(false);
 
   const handleNavigate = (view: 'home' | 'founder', targetId?: string) => {
     setCurrentView(view);
+    
+    if (view === 'founder') {
+        if (targetId === 'team') setActiveFounderTab('team');
+        else if (targetId === 'events') setActiveFounderTab('events');
+        else if (targetId === 'founder') setActiveFounderTab('founder');
+    }
     
     // Scroll handling for both views
     if (targetId) {
@@ -60,7 +67,11 @@ const App: React.FC = () => {
                 <ContactSection />
             </>
         ) : (
-            <FounderPage onOpenAnchor={openAnchorModal} onNavigate={handleNavigate} />
+            <FounderPage 
+                onOpenAnchor={openAnchorModal} 
+                onNavigate={handleNavigate} 
+                initialTab={activeFounderTab} 
+            />
         )}
       </main>
       
