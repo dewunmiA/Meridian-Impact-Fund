@@ -6,8 +6,36 @@
  * require a PHP index file to bootstrap the environment.
  */
 
-// If a direct request for a file that exists is made, the server usually handles it.
-// This script specifically serves the main application entry point.
+// Basic routing for assets to avoid MIME type issues in PHP environments
+$request_uri = $_SERVER['REQUEST_URI'];
+$path = parse_url($request_uri, PHP_URL_PATH);
+$file = ltrim($path, '/');
+
+if ($file && file_exists($file) && !is_dir($file)) {
+    $extension = pathinfo($file, PATHINFO_EXTENSION);
+    $mimetypes = [
+        'js' => 'application/javascript',
+        'tsx' => 'application/javascript',
+        'ts' => 'application/javascript',
+        'css' => 'text/css',
+        'html' => 'text/html',
+        'png' => 'image/png',
+        'jpg' => 'image/jpeg',
+        'jpeg' => 'image/jpeg',
+        'gif' => 'image/gif',
+        'svg' => 'image/svg+xml',
+        'ico' => 'image/x-icon',
+        'json' => 'application/json',
+    ];
+
+    if (isset($mimetypes[$extension])) {
+        header('Content-Type: ' . $mimetypes[$extension]);
+    }
+    readfile($file);
+    exit;
+}
+
+// Default to index.html
 $file = 'index.html';
 
 if (file_exists($file)) {
